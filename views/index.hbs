@@ -1,0 +1,26 @@
+<div class="container">	
+	<div class="row">
+		<br>
+		<a href="/friend/new" class="btn btn-primary">Add</a>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Surname</th>
+					<th>Lastname</th>
+					<th>Age</th>
+					<th colspan="2">Action</th>
+				</tr>
+			</thead>
+			{{#each friends}}
+				<tr>
+					<td>{{this.surname}}</td>
+					<td>{{this.lastname}}</td>
+					<td>{{this.age}}</td>
+					<td><a href="/friend/edit/{{this._id}}">Edit</a></td>
+					<td><a href="/friend/delete/{{this._id}}">Delete</a></td>
+				</tr>
+			{{/each}}
+		</table>
+
+	</div>
+</div>
